@@ -180,6 +180,30 @@ export const TESTIMONIALS_DATA: Testimonial[] = [
     text: 'Ehtisham engineered a secure doctor appointment booking portal that our patients love. It is super fast, accessible, and works flawlessly across mobile devices.',
     country: 'Canada',
     flagEmoji: '🇨🇦'
+  },
+  {
+    id: 'test-7',
+    name: 'Lars Weber',
+    role: 'Head of E-Commerce',
+    company: 'ElectroVault GmbH',
+    avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&q=80',
+    rating: 5,
+    projectType: 'E-Commerce Store',
+    text: 'The custom PC compatibility builder Ehtisham engineered for us completely transformed our business. Our average order value doubled and return rates dropped significantly. Exceptional work!',
+    country: 'Germany',
+    flagEmoji: '🇩🇪'
+  },
+  {
+    id: 'test-8',
+    name: 'Oliver Henderson',
+    role: 'Principal Architect',
+    company: 'UrbanBuild Australia',
+    avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80',
+    rating: 5,
+    projectType: 'Services Website',
+    text: 'The website Ehtisham built helped us secure two $5M commercial construction contracts within 60 days of launch. His understanding of premium architectural aesthetics is extraordinary.',
+    country: 'Australia',
+    flagEmoji: '🇦🇺'
   }
 ];
 

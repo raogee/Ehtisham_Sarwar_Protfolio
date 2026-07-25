@@ -7,7 +7,6 @@ import { Project } from '../types';
 import { PROJECTS_DATA } from '../data/portfolioData';
 import { SERVICES_DATA, TESTIMONIALS_DATA } from '../data/servicesData';
 import { ArrowRight, Sparkles, CheckCircle2, Award, Zap, Code2, ShieldCheck, Star, ExternalLink, Calculator, Send, Building2, ShoppingBag, Home as HomeIcon, Cpu, ChevronRight } from 'lucide-react';
-import { motion } from 'motion/react';
 
 interface HomePageProps {
   onSelectProject: (project: Project) => void;
@@ -101,7 +100,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onSelectProject, onNavigate,
                   <div className="relative group/photo">
                     <div className="relative w-full h-64 sm:h-72 rounded-2xl overflow-hidden border-2 border-amber-500/40 shadow-2xl shadow-amber-500/10 bg-black">
                       <img
-                        src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800"
+                        src="/assets/boss.jpeg"
                         alt="Ehtisham Sarwar - Senior Web Developer"
                         referrerPolicy="no-referrer"
                         className="w-full h-full object-cover object-top group-hover/photo:scale-105 transition-transform duration-500 filter contrast-[1.05]"
@@ -366,17 +365,19 @@ export const HomePage: React.FC<HomePageProps> = ({ onSelectProject, onNavigate,
       {/* SECTION 5: CLIENT TESTIMONIALS & CTA BANNER */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         <div className="p-8 sm:p-12 rounded-3xl bg-[#131316] text-white border border-white/10 shadow-2xl relative overflow-hidden">
-          <div className="max-w-3xl space-y-6">
+          <div className="max-w-3xl mx-auto space-y-6">
             <span className="px-3 py-1 text-xs font-mono font-bold uppercase tracking-widest rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/30">
               Verified Client Endorsements
             </span>
             <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-white uppercase">
               Trusted Globally Across USA, UK, UAE & Europe
             </h2>
+          </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
-              {TESTIMONIALS_DATA.slice(0, 2).map((t) => (
-                <div key={t.id} className="p-6 rounded-2xl bg-black/50 border border-white/10 space-y-3">
+          <div className="relative overflow-hidden pt-4 w-full">
+            <div className="flex animate-marquee gap-4 px-4">
+              {[...TESTIMONIALS_DATA.slice(0, 6), ...TESTIMONIALS_DATA.slice(0, 6)].map((t, index) => (
+                <div key={`${t.id}-${index}`} style={{ flex: '0 0 calc(33.333% - 11px)' }} className="p-6 rounded-2xl bg-black/50 border border-white/10 space-y-3">
                   <div className="flex items-center justify-between">
                     <div className="flex text-amber-400">
                       {[...Array(5)].map((_, i) => (
@@ -396,7 +397,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onSelectProject, onNavigate,
                     </div>
                   </div>
                 </div>
-              ))}
+                ))}
+              </div>
             </div>
 
             <div className="pt-6 flex flex-wrap items-center gap-4">
@@ -408,7 +410,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onSelectProject, onNavigate,
               </button>
             </div>
           </div>
-        </div>
       </section>
     </div>
   );

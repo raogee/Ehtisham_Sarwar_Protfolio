@@ -59,7 +59,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenResume }
             <div className="flex items-center gap-4">
               <div className="w-16 h-16 rounded-xl overflow-hidden border-2 border-amber-500/40 shadow-lg shadow-amber-500/20 shrink-0">
                 <img
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=300"
+                  src="/assets/boss.jpeg"
                   alt="Ehtisham Sarwar"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover object-top"

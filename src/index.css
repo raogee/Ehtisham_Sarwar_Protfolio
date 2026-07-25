@@ -1,0 +1,200 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Base html & body theme transitions */
+html, body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html.light body {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+html.dark body {
+  background-color: #0A0A0B;
+  color: #f4f4f5;
+}
+
+/* Light mode styling overrides for sleek contrast */
+html.light .bg-\[\#0A0A0B\],
+html.light .bg-\[\#131316\],
+html.light .bg-\[\#0D1418\],
+html.light .bg-\[\#111B21\],
+html.light .bg-\[\#121216\] {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #e2e8f0 !important;
+}
+
+/* Light mode Header & Navbar dark text/icons styling */
+html.light header {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  color: #0f172a !important;
+  border-color: #e2e8f0 !important;
+}
+
+html.light header .bg-\[\#121216\] {
+  background-color: #f8fafc !important;
+  border-color: #e2e8f0 !important;
+}
+
+html.light header nav {
+  background-color: #f1f5f9 !important;
+  border-color: #cbd5e1 !important;
+}
+
+html.light header nav button {
+  color: #334155 !important;
+}
+
+html.light header nav button:hover {
+  color: #0f172a !important;
+  background-color: #e2e8f0 !important;
+}
+
+html.light header nav button.bg-amber-500\/20,
+html.light header nav button.text-amber-400 {
+  color: #b45309 !important;
+  background-color: #fef3c7 !important;
+  border-color: #fde68a !important;
+  font-weight: 800 !important;
+}
+
+html.light header .text-white,
+html.light header .text-zinc-100 {
+  color: #0f172a !important;
+}
+
+html.light header .text-white\/90,
+html.light header .text-white\/80,
+html.light header .text-white\/70,
+html.light header .text-white\/60 {
+  color: #334155 !important;
+}
+
+html.light header .text-white\/50,
+html.light header .text-white\/40 {
+  color: #64748b !important;
+}
+
+html.light header .text-amber-400,
+html.light header .text-amber-500,
+html.light header .text-amber-300 {
+  color: #d97706 !important;
+}
+
+html.light header .border-white\/10,
+html.light header .border-white\/5,
+html.light header .border-white\/20 {
+  border-color: #e2e8f0 !important;
+}
+
+html.light header .bg-white\/5,
+html.light header .bg-white\/10 {
+  background-color: #f1f5f9 !important;
+  color: #0f172a !important;
+  border-color: #e2e8f0 !important;
+}
+
+html.light header a,
+html.light header button {
+  color: #1e293b;
+}
+
+html.light header a:hover,
+html.light header button:hover {
+  color: #0f172a;
+}
+
+html.light header a.text-emerald-400 {
+  color: #059669 !important;
+}
+
+html.light .bg-black,
+html.light .bg-black\/60,
+html.light .bg-black\/80,
+html.light .bg-black\/40 {
+  background-color: #f1f5f9 !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+html.light .bg-white\/5,
+html.light .bg-white\/10 {
+  background-color: #f1f5f9 !important;
+  color: #1e293b !important;
+  border-color: #e2e8f0 !important;
+}
+
+html.light .text-white,
+html.light .text-zinc-100,
+html.light .text-white\/90,
+html.light .text-white\/80 {
+  color: #0f172a !important;
+}
+
+html.light .text-white\/70,
+html.light .text-white\/60,
+html.light .text-white\/50,
+html.light .text-white\/40 {
+  color: #475569 !important;
+}
+
+html.light .border-white\/10,
+html.light .border-white\/5,
+html.light .border-white\/20 {
+  border-color: #e2e8f0 !important;
+}
+
+html.light .placeholder\:text-white\/30::placeholder,
+html.light .placeholder\:text-white\/40::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+html.light ::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+html.light ::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+html.light ::-webkit-scrollbar-thumb:hover {
+  background: #d97706;
+}
+
+html.dark ::-webkit-scrollbar-track {
+  background: #0A0A0B;
+}
+html.dark ::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 4px;
+}
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background: #f59e0b;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 45s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
